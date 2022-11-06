@@ -1,3 +1,4 @@
+using Assets.Code.Infrastrucrure;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -13,7 +14,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Start()
     {
-        _inputService = new InputService();
+        _inputService = AllServices.Instance.GetService<InputService>();
     }
 
     void Update()

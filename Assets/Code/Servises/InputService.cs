@@ -1,16 +1,18 @@
-﻿using System;
+﻿using Assets.Code.Infrastrucrure;
 using UnityEngine;
 
-public class InputService
+
+public class InputService : IService
 {
+
     private Vector3 _inputVector = Vector3.zero;
 
     public Vector3 MousePosition => Input.mousePosition;
 
     public Vector3 GetInputVector()
     {
-        _inputVector.x = Input.GetAxis("Horizontal");
-        _inputVector.z = Input.GetAxis("Vertical");
+        _inputVector.z = Input.GetAxis("Horizontal");
+        _inputVector.x = Input.GetAxis("Vertical");
 
         return _inputVector;
     }

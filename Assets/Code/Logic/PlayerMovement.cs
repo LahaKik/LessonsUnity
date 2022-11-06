@@ -1,3 +1,4 @@
+using Assets.Code.Infrastrucrure;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _verticalVelocity = Vector3.up * Gravity;
-        _inputService = new InputService();
+        _inputService = AllServices.Instance.GetService<InputService>();
     }
 
     private void Update()
