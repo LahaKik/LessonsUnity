@@ -9,13 +9,15 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 _verticalVelocity;
     private InputService _inputService;
+    private AllServices _services = AllServices.Instance;
+
 
     private const float Gravity = -9.81f;
 
     private void Start()
     {
         _verticalVelocity = Vector3.up * Gravity;
-        _inputService = AllServices.Instance.GetService<InputService>();
+        _inputService = _services.GetService<InputService>();
     }
 
     private void Update()

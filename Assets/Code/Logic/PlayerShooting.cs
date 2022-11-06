@@ -7,6 +7,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private LayerMask _ignoreLayer;
     [SerializeField] private GameObject _projectilePrefab;
     [SerializeField] private float _distanceCheck;
+    private AllServices _services = AllServices.Instance;
 
 
     private Vector3 direction;
@@ -14,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Start()
     {
-        _inputService = AllServices.Instance.GetService<InputService>();
+        _inputService = _services.GetService<InputService>();
     }
 
     void Update()
