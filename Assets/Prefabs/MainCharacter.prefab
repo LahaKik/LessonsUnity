@@ -156,8 +156,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterController: {fileID: 170170469293105719}
-  _speed: 7
-  _jumpForce: 1000
+  _speed: 11
+  _jumpForce: 0.75
+  _acceleration: 0
+  _maxAcceleration: 0.3
+  _groundAcceleration: 1
+  _controlMovement: 5
+  _accelerationVector: {x: 0, y: 0, z: 0}
+  _playerVelocity: {x: 0, y: 0, z: 0}
+  _timeLerp: 15
+  _isGrounded: 1
+  _wishedDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &170170469293105721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +183,7 @@ MonoBehaviour:
   _ignoreLayer:
     serializedVersion: 2
     m_Bits: 128
-  _projectilePrefab: {fileID: 5011611643961224256, guid: 3a859294db194f44090106a4d6a591e9, type: 3}
+  _projectilePrefab: {fileID: 2230069332323216625, guid: 6029d13a3945c0f4ab9a5c1f6806ad29, type: 3}
   _distanceCheck: 1000
 --- !u!1 &346789054586563224
 GameObject:
@@ -2856,14 +2865,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8847871552501350656}
-  m_LocalRotation: {x: 0.15328686, y: -0.69029206, z: 0.15328686, w: 0.69029206}
-  m_LocalPosition: {x: 4.19, y: 5.74, z: -0.091}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0.08, y: 9.351, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655064355385800846}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 25.04, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!20 &8847871552501350658
 Camera:
   m_ObjectHideFlags: 0
